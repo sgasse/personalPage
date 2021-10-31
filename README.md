@@ -1,8 +1,10 @@
-# Personal Landingpage with HTML, CSS, nginx and docker
+# Personal Landingpage with HTML & CSS
 
-This repository features my basic personal landing page with HTML and CSS, served via nginx. It includes a few decent animations. Everything works without JavaScript.
+This repository features my basic personal landing page with HTML and CSS.
+In a previous version, I served the page with nginx and retrieved certificates
+with letsencrypt. By now, I serve the page with caddy.
 
-# Certificate setup
+## Previous certificate setup
 
 The nginx server needs to run to enable responding to ACME challenges which is needed to obtain certificates via letsencrypt. However, without any certificates, launching nginx will fail. One possibility would be to launch nginx with two different configurations; once without certificates and SSL block and once with. However instead, we will launch nginx with self-signed certificates, obtain correct certificates and then reload.
 
